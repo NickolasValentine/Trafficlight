@@ -29,21 +29,7 @@ public class TrafficLightApp extends Application {
         VBox flashingGreenDurationSlider = createDurationSlider("Flashing Green Duration", 3); // flashingGreen Slider + label
         VBox yellowDurationSlider2 = createDurationSlider("Yellow Duration (After Green)", 2); // yellow Slider + label
 
-        Button startButton = new Button("Start Traffic Light"); // start Button
-        startButton.setOnAction(event -> { // The start button also updates the entered time
-            trafficLight.setPhaseDuration(0, (int) ((Slider) redDurationSlider.getChildren().get(1)).getValue());
-            trafficLight.setPhaseDuration(1, (int) ((Slider) redYellowDurationSlider.getChildren().get(1)).getValue());
-            trafficLight.setPhaseDuration(2, (int) ((Slider) yellowDurationSlider1.getChildren().get(1)).getValue());
-            trafficLight.setPhaseDuration(3, (int) ((Slider) greenDurationSlider.getChildren().get(1)).getValue());
-            trafficLight.setPhaseDuration(4, (int) ((Slider) flashingGreenDurationSlider.getChildren().get(1)).getValue());
-            trafficLight.setPhaseDuration(5, (int) ((Slider) yellowDurationSlider2.getChildren().get(1)).getValue());
-            if (!trafficLight.isRunning && !trafficLight.isPaused) { // If the traffic light is not running (turn it on)
-                System.out.println("Starting Traffic Light");
-                trafficLight.start();
-            } else if (trafficLight.isPaused) { // If the traffic light is paused (resume it)
-                trafficLight.resume();
-            }
-        });
+
 
         Button stopButton = new Button("Stop Traffic Light");
         stopButton.setOnAction(event -> {

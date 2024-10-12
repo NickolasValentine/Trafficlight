@@ -37,12 +37,10 @@ public class TrafficLightApp extends Application {
             trafficLight.setPhaseDuration(3, (int) ((Slider) greenDurationSlider.getChildren().get(1)).getValue());
             trafficLight.setPhaseDuration(4, (int) ((Slider) flashingGreenDurationSlider.getChildren().get(1)).getValue());
             trafficLight.setPhaseDuration(5, (int) ((Slider) yellowDurationSlider2.getChildren().get(1)).getValue());
-            if (!trafficLight.isRunning && !trafficLight.isPaused) {
-                // If the traffic light is not running (turn it on)
+            if (!trafficLight.isRunning && !trafficLight.isPaused) { // If the traffic light is not running (turn it on)
                 System.out.println("Starting Traffic Light");
                 trafficLight.start();
-            } else if (trafficLight.isPaused) {
-                // If the traffic light is paused (resume it)
+            } else if (trafficLight.isPaused) { // If the traffic light is paused (resume it)
                 trafficLight.resume();
             }
         });

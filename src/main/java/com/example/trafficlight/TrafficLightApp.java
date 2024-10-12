@@ -49,6 +49,7 @@ public class TrafficLightApp extends Application {
         stopButton.setOnAction(event -> {
             trafficLight.stop();  // Stop and pause
         });
+
         VBox root = new VBox(10, trafficLight, redDurationSlider, redYellowDurationSlider, yellowDurationSlider1, greenDurationSlider, flashingGreenDurationSlider, yellowDurationSlider2, startButton, stopButton);
         root.setPadding(new Insets(10));
         Scene scene = new Scene(root, 350, 720);

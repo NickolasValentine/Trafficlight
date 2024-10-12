@@ -194,7 +194,7 @@ public class TrafficLight extends VBox {
                 break;
             case "RedYellow":
                 redLight.setFill(RED_COLOR);
-                yellowLight.setFill(Color.YELLOW);
+                yellowLight.setFill(YELLOW_COLOR);
                 break;
             case "Yellow":
                 yellowLight.setFill(YELLOW_COLOR);
